@@ -1,0 +1,17 @@
+<div id="productsView" class="productContainer">  
+    <h2 class="title">Vista de productos</h2>
+        {{#if products.length}}
+            <div class="titleHeader"><h5 class="titleNombre">Nombre</h5><h5 class="titlePrecio">Precio</h5><h5 class="titleFoto">Foto</h5></div>
+            {{#each products}}
+                <div class="productData">
+                    <div class="productTitle"><h5> {{this.title}}</h5></div>
+                    <div class="productPrice"><h5>${{this.price}}</h5></div>
+                    <div class="productThumbnail"><img src={{this.thumbnail}} alt=""></img></div>
+                </div>
+            {{/each}}
+
+            {{else}}
+                <h2 class="title">No hay productos</h2>
+        {{/if}}
+        <script src='/api/index.js'></script>
+</div>

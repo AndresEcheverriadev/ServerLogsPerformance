@@ -1,0 +1,21 @@
+<div>
+  <div class="formContainerMesagges">
+    <h2 class="titleMesagges">
+      Combinaciones:<br />
+      {{#if combinations.length}}
+        {{#each combinations}}
+          <div class="productData">
+            <div class="productTitle"><h5>número:</h5><h5
+                id="numero"
+              >{{this.numero}}</h5></div>
+            <div class="productTitle"><h5>veces que salió:</h5>
+              <h5 id="cantidad">{{this.repeticiones}}</h5></div>
+          </div>
+        {{/each}}
+
+      {{else}}
+        <h2 class="title">No hay combinaciones</h2>
+      {{/if}}
+    </h2>
+  </div>
+</div>
